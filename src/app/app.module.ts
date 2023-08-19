@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AuthenticationComponent } from './authentication/authentication.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { CartPageComponent } from './cart-page/cart-page.component';
     HeaderComponent,
     FooterComponent,
     HomePageComponent,
-    CartPageComponent
+    CartPageComponent,
+    NavbarComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
