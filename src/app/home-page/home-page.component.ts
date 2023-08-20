@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+  loginChoice : boolean = false;
+  registerChoice : boolean = true;
+
 }
