@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RegisterForm } from '../auth/auth';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -9,38 +10,24 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 })
 export class RegisterComponent {
 
+  constructor(private authService : AuthService){}
+
   form : RegisterForm = {
     email : '',
     password : '',
     confirm_password : '',
   }
 
-  registrationDone : boolean = false;
-
-  isLoading : boolean = false;
-
-  passwordMatched : boolean = true;
 
   submit() {
-
-    this.isLoading = true;
-
-    if(this.form.password != this.form.confirm_password){
-      this.passwordMatched = false;
-      return;
-    }
-
-    const auth = getAuth();
-    createUserWithEmailAndPassword(auth, this.form.email, this.form.password)
-    .then((userCredential) => {
-      console.log(userCredential)
-      this.registrationDone = true;
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // ..
-    }).finally(() => this.isLoading = false)
+    this.authService.register(this.form)
   }
+  isLoading(){
+    return this.authService.isLoading;
+  }
+  registrationDone(){
+    return this.authService.registrationDone;
+  }
+  
 
 }

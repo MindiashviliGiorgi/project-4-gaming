@@ -25,15 +25,15 @@
     </div>
     <div class="box btn">
       <button type="submit" [disabled]="myForm.form.invalid">
-        <ng-container *ngIf="isLoading">
+        <ng-container *ngIf="isLoading()">
           Loading...
         </ng-container>
-        <ng-container *ngIf="!isLoading">
+        <ng-container *ngIf="!isLoading()">
           Submit
         </ng-container>
       </button>
     </div>
-    <div class="registration-done" [class.reg-done]="registrationDone">
+    <div class="registration-done" [class.reg-done]="registrationDone()">
       <p>Registration completed successfully</p>
       <img [src]="'/assets/images/reg-done.png'">
     </div>

@@ -8,7 +8,12 @@
       <li>Market</li>
       <li>Stats</li>
       <li>About</li>
-      <li>Cart</li>
+      <ng-container *ngIf="isAuthenticated()">
+        <li>Cart</li>
+      </ng-container>
+      <ng-container *ngIf="isAuthenticated()">
+        <button (click)="signout()" class="logout-btn">Logout</button>
+      </ng-container>
     </ul>
   </div>
 </div>

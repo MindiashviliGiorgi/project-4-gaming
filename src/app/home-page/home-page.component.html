@@ -11,8 +11,15 @@
       </div>
       <div class="section-right">
         <div class="title">
-          <p (click)="loginChoice = true; registerChoice = false;">Login</p>
-          <p (click)="registerChoice = true; loginChoice = false;">Register</p>
+          <p (click)="loginChoice = true; registerChoice = false; activeMove = false;">
+            Login
+          </p>
+          <div class="decoration-active" [class.active-right]="activeMove">
+            <img [src]="'/assets/images/active2.png'">
+          </div>
+          <p (click)="registerChoice = true; loginChoice = false; activeMove = true;">
+            Register
+          </p>
         </div>
         <div *ngIf="loginChoice" class="form-box">
           <app-login></app-login>

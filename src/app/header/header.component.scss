@@ -50,6 +50,22 @@
           transition: 0.2s;
         }
       }
+      .logout-btn {
+        border: none;
+        background-color: #000;
+        color: #fff;
+        padding: 5px 13px;
+        font-size: 16px;
+        border-radius: 3px;
+        cursor: pointer;
+        &:active {
+          text-decoration: line-through;
+        }
+        &:hover {
+          background-color: #2d2d2d;
+          transition: 0.3s;
+        }
+      }
     }
   }
 }

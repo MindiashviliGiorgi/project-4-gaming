@@ -7,7 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
-  loginChoice : boolean = false;
-  registerChoice : boolean = true;
+  constructor(){}
+
+  ngOnInit():void {}
+
+  loginChoice : boolean = true;
+  registerChoice : boolean = false;
+
+  activeMove : boolean = false;
 
 }
