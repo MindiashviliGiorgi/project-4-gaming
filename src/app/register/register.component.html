@@ -24,7 +24,19 @@
       <p>Confirm password field must be valid</p>
     </div>
     <div class="box btn">
-      <input type="submit" [disabled]="myForm.form.invalid">
+      <button type="submit" [disabled]="myForm.form.invalid">
+        <ng-container *ngIf="isLoading">
+          Loading...
+        </ng-container>
+        <ng-container *ngIf="!isLoading">
+          Submit
+        </ng-container>
+      </button>
+    </div>
+    <div class="registration-done" [class.reg-done]="registrationDone">
+      <p>Registration completed successfully</p>
+      <img [src]="'/assets/images/reg-done.png'">
     </div>
   </form>
+
 </div>
