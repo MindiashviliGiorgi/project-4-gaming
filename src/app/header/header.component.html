@@ -9,7 +9,7 @@
       <li>Stats</li>
       <li>About</li>
       <ng-container *ngIf="isAuthenticated()">
-        <li>Cart</li>
+        <li [routerLink]="'/cart'">Cart</li>
       </ng-container>
       <ng-container *ngIf="isAuthenticated()">
         <button (click)="signout()" class="logout-btn">Logout</button>

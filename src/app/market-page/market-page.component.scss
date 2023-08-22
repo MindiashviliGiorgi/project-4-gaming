@@ -1,0 +1,64 @@
+.market-page-main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0px;
+  background-color: #161616;
+  .market-page-nav {
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 150px;
+    .nav-left {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      column-gap: 80px;
+    }
+    .nav-right {
+      .grid-choice {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        column-gap: 20px;
+        img {
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+          cursor: pointer;
+        }
+        .imgx {
+          width: 28px;
+          height: 28px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .market-page-containers {
+    width: 100%;
+    height: 900px;
+    padding: 50px 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, 330px);
+    grid-row-gap: 33px;
+    grid-column-gap: 33px;
+    .container {
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      .title {
+        font-size: 20px;
+      }
+    }
+  }
+}

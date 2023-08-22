@@ -12,6 +12,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { MarketPageComponent } from './market-page/market-page.component';
+import { StatsPageComponent } from './stats-page/stats-page.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { RegisterComponent } from './register/register.component';
     NavbarComponent,
     AuthenticationComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    MarketPageComponent,
+    StatsPageComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,
