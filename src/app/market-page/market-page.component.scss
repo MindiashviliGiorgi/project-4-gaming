@@ -18,6 +18,50 @@
       align-items: center;
       flex-direction: row;
       column-gap: 80px;
+      .search {
+        input {
+          font-size: 16px;
+          padding: 5px 10px;
+          outline: none;
+          border: none;
+          border-radius: 3px;
+          transition: 0.2s;
+          &:hover {
+            box-shadow: 0px 0px 7px #cacaca;
+            transition: 0.2s;
+          }
+        }
+      }
+      .search-by-price {
+        select {
+          font-size: 16px;
+          padding: 5px 10px;
+          outline: none;
+          border: none;
+          border-radius: 3px;
+          transition: 0.2s;
+          cursor: pointer;
+          &:hover {
+            box-shadow: 0px 0px 7px #cacaca;
+            transition: 0.2s;
+          }
+        }
+      }
+      .search-by-year {
+        select {
+          font-size: 16px;
+          padding: 5px 10px;
+          outline: none;
+          border: none;
+          border-radius: 3px;
+          transition: 0.2s;
+          cursor: pointer;
+          &:hover {
+            box-shadow: 0px 0px 7px #cacaca;
+            transition: 0.2s;
+          }
+        }
+      }
     }
     .nav-right {
       .grid-choice {
@@ -41,11 +85,11 @@
   }
   .market-page-containers {
     width: 100%;
-    height: auto;
+    min-height: 100vh;
     padding: 50px 150px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(auto, auto);
+    grid-template-rows: repeat(1, 400px);
     grid-row-gap: 33px;
     grid-column-gap: 33px;
     .container {

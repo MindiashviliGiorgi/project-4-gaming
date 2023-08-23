@@ -2,7 +2,9 @@
   <div class="market-page-nav">
     <div class="nav-left">
       <div class="search">
-        <input type="search">
+        <input type="search" placeholder="Search" 
+        [(ngModel)]="searchValue"
+        (input)="searchItem()">
       </div>
       <div class="search-by-price">
         <select name="price">
@@ -32,20 +34,33 @@
     </div>
   </div>
   <div class="market-page-containers">
-    <div class="container" *ngFor="let singleProduct of product">
-      <div class="image">
-        <img [src]="singleProduct.image">
-      </div>
-      <div class="title">
-        <h3>{{ singleProduct.title }}</h3>
-      </div>
-      <div class="year-price">
-        <p>Year : {{ singleProduct.year }}</p>
-        <p>Price : {{ singleProduct.price }}$</p>
-      </div>
-      <div class="add-to-cart">
-        <button>Add to cart</button>
-      </div>
-    </div>
+    <ng-container  *ngFor="let singleProduct of product">
+      <ng-container>
+        <ng-container  *ngIf="searchValue === '' || singleProduct.title.toLowerCase().includes(searchValue)">
+          <div class="container">
+            <div class="image">
+              <img [src]="singleProduct.image">
+            </div>
+            <div class="title">
+              <h3>{{ singleProduct.title }}</h3>
+            </div>
+            <div class="year-price">
+              <p>Year : {{ singleProduct.year }}</p>
+              <p>Price : {{ singleProduct.price }}$</p>
+            </div>
+            <div class="add-to-cart">
+              <button>
+                <ng-container *ngIf="isAuthenticated()">
+                  Add to cart
+                </ng-container>
+                <ng-container *ngIf="!isAuthenticated()">
+                  Login needed
+                </ng-container>
+              </button>
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+    </ng-container>
   </div>
 </div>
