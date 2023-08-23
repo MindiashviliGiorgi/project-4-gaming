@@ -15,6 +15,7 @@ import { RegisterComponent } from './register/register.component';
 import { MarketPageComponent } from './market-page/market-page.component';
 import { StatsPageComponent } from './stats-page/stats-page.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { SaleProductComponent } from './sale-product/sale-product.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProductPageComponent } from './product-page/product-page.component';
     RegisterComponent,
     MarketPageComponent,
     StatsPageComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    SaleProductComponent
   ],
   imports: [
     BrowserModule,

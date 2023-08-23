@@ -27,7 +27,7 @@ export class MarketPageComponent {
 
   searchValue : string = '';
   searchYearValue : string = '';
-  searchPriceValue : number = 0;
+  searchPriceValue : number = 200;
   
   searchTextChange : EventEmitter<string> = new EventEmitter<string>();
   searchItem(){
