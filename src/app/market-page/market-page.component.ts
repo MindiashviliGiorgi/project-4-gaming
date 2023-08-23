@@ -26,10 +26,22 @@ export class MarketPageComponent {
   }
 
   searchValue : string = '';
+  searchYearValue : string = '';
+  searchPriceValue : number = 0;
   
   searchTextChange : EventEmitter<string> = new EventEmitter<string>();
   searchItem(){
     this.searchTextChange.emit(this.searchValue)
+  }
+
+  searchYearChange : EventEmitter<string> = new EventEmitter<string>();
+  searchItemYear(){
+    this.searchYearChange.emit(this.searchYearValue)
+  }
+
+  searchPriceChange : EventEmitter<number> = new EventEmitter<number>();
+  searchItemPrice(){
+    this.searchPriceChange.emit(this.searchPriceValue)
   }
 
 

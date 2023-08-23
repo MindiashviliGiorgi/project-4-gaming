@@ -7,22 +7,28 @@
         (input)="searchItem()">
       </div>
       <div class="search-by-price">
-        <select name="price">
-          <option value="">Any price</option>
-          <option value="80">Under 80$</option>
-          <option value="60">Under 60$</option>
-          <option value="40">Under 40$</option>
-          <option value="20">Under 20$</option>
+        <select name="price"
+        [(ngModel)]="searchPriceValue"
+        (input)="searchItemPrice()"
+        >
+          <option value="0">Any price</option>
+          <option value="80">More than 80$</option>
+          <option value="60">More than 60$</option>
+          <option value="40">More than 40$</option>
+          <option value="20">More than 20$</option>
         </select>
       </div>
       <div class="search-by-year">
-        <select name="year">
+        <select name="year" 
+        [(ngModel)]="searchYearValue"
+        (input)="searchItemYear()"
+        >
           <option value="">Any year</option>
           <option value="2023">2023</option>
           <option value="2022">2022</option>
           <option value="2021">2021</option>
           <option value="2020">2020</option>
-          <option value="2019">Under 2019</option>
+          <option value="2000">Under 2019</option>
         </select>
       </div>
     </div>
@@ -35,30 +41,32 @@
   </div>
   <div class="market-page-containers">
     <ng-container  *ngFor="let singleProduct of product">
-      <ng-container>
+      <ng-container *ngIf="searchYearValue === '' || singleProduct.year.toLowerCase().includes(searchYearValue)">
         <ng-container  *ngIf="searchValue === '' || singleProduct.title.toLowerCase().includes(searchValue)">
-          <div class="container">
-            <div class="image">
-              <img [src]="singleProduct.image">
+          <ng-container *ngIf="searchPriceValue < singleProduct.price">
+            <div class="container">
+              <div class="image">
+                <img [src]="singleProduct.image">
+              </div>
+              <div class="title">
+                <h3>{{ singleProduct.title }}</h3>
+              </div>
+              <div class="year-price">
+                <p>Year : {{ singleProduct.year }}</p>
+                <p>Price : {{ singleProduct.price }}$</p>
+              </div>
+              <div class="add-to-cart">
+                <button>
+                  <ng-container *ngIf="isAuthenticated()">
+                    Add to cart
+                  </ng-container>
+                  <ng-container *ngIf="!isAuthenticated()">
+                    Login needed
+                  </ng-container>
+                </button>
+              </div>
             </div>
-            <div class="title">
-              <h3>{{ singleProduct.title }}</h3>
-            </div>
-            <div class="year-price">
-              <p>Year : {{ singleProduct.year }}</p>
-              <p>Price : {{ singleProduct.price }}$</p>
-            </div>
-            <div class="add-to-cart">
-              <button>
-                <ng-container *ngIf="isAuthenticated()">
-                  Add to cart
-                </ng-container>
-                <ng-container *ngIf="!isAuthenticated()">
-                  Login needed
-                </ng-container>
-              </button>
-            </div>
-          </div>
+          </ng-container>
         </ng-container>
       </ng-container>
     </ng-container>
