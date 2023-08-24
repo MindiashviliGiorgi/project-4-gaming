@@ -1,37 +1,41 @@
-<div class="home-page-main">
-  <app-header></app-header>
-  <div class="home-page-section">
-    <div class="section">
-      <div class="section-left">
-        <h1>Welcome to PROJECT4<br></h1>
-        <h3>
-          Here you can buy the<br>best games of the year,<br>
-          Register if you want to buy a CD
-        </h3>
-      </div>
-      <div class="section-right">
-        <div class="title">
-          <p (click)="loginChoice = true; registerChoice = false; activeMove = false;">
-            Login
-          </p>
-          <div class="decoration-active" [class.active-right]="activeMove">
-            <img [src]="'/assets/images/active2.png'">
+<div class="main">
+  <div class="home-page-main">
+    <app-header></app-header>
+    <div class="home-page-section">
+      <div class="section">
+        <div class="section-left">
+          <h1>Welcome to PROJECT4<br></h1>
+          <h3>
+            Here you can buy the<br>best games of the year,<br>
+            Register if you want to buy a CD
+          </h3>
+        </div>
+        <div class="section-right">
+          <div class="title">
+            <p (click)="loginChoice = true; registerChoice = false; activeMove = false;">
+              Login
+            </p>
+            <div class="decoration-active" [class.active-right]="activeMove">
+              <img [src]="'/assets/images/active2.png'">
+            </div>
+            <p (click)="registerChoice = true; loginChoice = false; activeMove = true;">
+              Register
+            </p>
           </div>
-          <p (click)="registerChoice = true; loginChoice = false; activeMove = true;">
-            Register
-          </p>
-        </div>
-        <div *ngIf="loginChoice" class="form-box">
-          <app-login></app-login>
-        </div>
-        <div *ngIf="registerChoice" class="form-box">
-          <app-register></app-register>
+          <div *ngIf="loginChoice" class="form-box">
+            <app-login></app-login>
+          </div>
+          <div *ngIf="registerChoice" class="form-box">
+            <app-register></app-register>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <app-scroll-box></app-scroll-box>
+  <app-market-page></app-market-page>
+  <app-sale-product></app-sale-product>
+  <app-contact-page></app-contact-page>
+  <app-footer></app-footer>
 </div>
-<app-market-page></app-market-page>
-<app-sale-product></app-sale-product>
-<app-contact-page></app-contact-page>
-<app-footer></app-footer>
+

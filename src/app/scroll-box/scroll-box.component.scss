@@ -1,0 +1,28 @@
+.progress {
+  position: fixed;
+  cursor: pointer;
+  bottom: 20px;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .progress-value {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+          width: 25px;
+          height: 25px;
+          object-fit: cover;
+      }
+  }
+}
