@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="image">
+    <img [src]="product.image">
+  </div>
+  <div class="title">
+    <h3>{{ product.title }}</h3>
+  </div>
+  <div class="year-price">
+    <p>Year : {{ product.year }}</p>
+    <p>Price : {{ product.price }}$</p>
+  </div>
+  <div class="add-to-cart">
+    <div class="login-need" *ngIf="!isAuthenticated()">
+      <button>Login needed</button>
+    </div>
+    <div class="add" *ngIf="isAuthenticated() && !isInCart">
+      <button  (click)="addToCart()">Add to cart</button>
+    </div>
+    <div class="remove" *ngIf="isInCart">
+      <button (click)="removeFromCart()">Remove from cart</button>
+    </div>
+  </div>
+</div>

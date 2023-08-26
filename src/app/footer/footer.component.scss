@@ -5,6 +5,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
   .footer {
     width: 900px;
     height: auto;

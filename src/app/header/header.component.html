@@ -5,10 +5,10 @@
   </div>
   <div class="header-right">
     <ul>
-      <li>Market</li>
+      <li (click)="scrollZero()">Market</li>
       <li>Stats</li>
       <li>About</li>
-      <ng-container *ngIf="isAuthenticated()">
+      <ng-container>
         <li [routerLink]="'/cart'">Cart</li>
       </ng-container>
       <ng-container *ngIf="isAuthenticated()">
@@ -17,3 +17,5 @@
     </ul>
   </div>
 </div>
+
+<!-- *ngIf="isAuthenticated()" -->

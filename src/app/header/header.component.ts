@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
 
 @Component({
@@ -16,5 +16,17 @@ export class HeaderComponent {
   signout(){
     this.authService.logout();
   }
+
+  @HostListener("document:scroll")
+  scrollFunction(){
+    let pos = document.documentElement.scrollTop;
+    let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollValue = Math.round((pos * 100)/calcHeight);
+    
+  }
+  scrollZero(){
+    document.documentElement.scrollTop = 708;
+  }
+
 
 }

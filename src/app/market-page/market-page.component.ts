@@ -1,7 +1,8 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input } from '@angular/core';
 import { MarketPageService } from './market-page.service';
 import { Product } from '../types/product';
 import { AuthService } from '../auth/auth.service';
+import { ProductService } from '../cart-page/product.service';
 
 @Component({
   selector: 'app-market-page',
@@ -10,19 +11,22 @@ import { AuthService } from '../auth/auth.service';
 })
 export class MarketPageComponent {
 
+  prod : Product[] = [];
+
   constructor(
-    private marketService : MarketPageService, 
-    private authService : AuthService
+    private authService : AuthService,
+    private marketService : MarketPageService
     ){}
 
-  product : Product[] = [];
+  
 
   isAuthenticated(){
     return this.authService.isAuthenticated;
   }
 
+
   ngOnInit(): void {
-    this.product = this.marketService.getProduct();
+    this.prod = this.marketService.getProduct();
   }
 
   searchValue : string = '';

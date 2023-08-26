@@ -39,32 +39,11 @@
     </div>
   </div>
   <div class="market-page-containers">
-    <ng-container  *ngFor="let singleProduct of product">
+    <ng-container  *ngFor="let singleProduct of prod">
       <ng-container *ngIf="searchYearValue === '' || singleProduct.year.toLowerCase().includes(searchYearValue)">
         <ng-container  *ngIf="searchValue === '' || singleProduct.title.toLowerCase().includes(searchValue)">
           <ng-container *ngIf="searchPriceValue > singleProduct.price">
-            <div class="container">
-                <div class="image">
-                  <img [src]="singleProduct.image">
-                </div>
-                <div class="title">
-                  <h3>{{ singleProduct.title }}</h3>
-                </div>
-                <div class="year-price">
-                  <p>Year : {{ singleProduct.year }}</p>
-                  <p>Price : {{ singleProduct.price }}$</p>
-                </div>
-                <div class="add-to-cart">
-                  <button>
-                    <ng-container *ngIf="isAuthenticated()">
-                      Add to cart
-                    </ng-container>
-                    <ng-container *ngIf="!isAuthenticated()">
-                      Login needed
-                    </ng-container>
-                  </button>
-                </div>
-            </div>
+            <app-container [product]="singleProduct"></app-container>
           </ng-container>
         </ng-container>
       </ng-container>

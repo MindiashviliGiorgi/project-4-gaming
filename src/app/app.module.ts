@@ -18,6 +18,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { SaleProductComponent } from './sale-product/sale-product.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { ScrollBoxComponent } from './scroll-box/scroll-box.component';
+import { ContainerComponent } from './market-page/container/container.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ScrollBoxComponent } from './scroll-box/scroll-box.component';
     ProductPageComponent,
     SaleProductComponent,
     ContactPageComponent,
-    ScrollBoxComponent
+    ScrollBoxComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,
