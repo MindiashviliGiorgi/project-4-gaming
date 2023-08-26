@@ -19,6 +19,6 @@ export class ProductService {
   }
 
   removeProduct(product : Product){
-    this.product = this.product.filter((c) => c! = product)
+    this.product = this.product.filter((c) => c!= product)
   }
 }

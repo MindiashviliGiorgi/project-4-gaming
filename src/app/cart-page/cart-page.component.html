@@ -3,8 +3,18 @@
   <div class="containers-list"  *ngFor="let item of getItems()">
     <div class="container">
       <div class="title">
-        <h1>{{ item.title }}</h1>
+        <h4>{{ item.title }}</h4>
       </div>
+      <div class="price">
+        <p>{{ item.price }}$</p>
+      </div>
+    </div>
+  </div>
+  <div  *ngIf="sum() > 0" class="total">
+    <h3>Total amount</h3>
+    <p> {{sum()}}$ </p>
+    <div class="buy">
+      <button>Buy Now</button>
     </div>
   </div>
 </div>

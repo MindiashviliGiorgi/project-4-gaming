@@ -19,6 +19,8 @@ import { SaleProductComponent } from './sale-product/sale-product.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { ScrollBoxComponent } from './scroll-box/scroll-box.component';
 import { ContainerComponent } from './market-page/container/container.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { ContainerComponent } from './market-page/container/container.component'
     SaleProductComponent,
     ContactPageComponent,
     ScrollBoxComponent,
-    ContainerComponent
+    ContainerComponent,
+    ShoppingCartComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,

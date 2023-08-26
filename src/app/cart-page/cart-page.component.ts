@@ -20,6 +20,15 @@ export class CartPageComponent {
     return this.productService.getProduct();
   }
 
+  sum(){
+    let result = 0;
+
+    let productList = this.productService.getProduct();
+    productList.forEach(a => result += a.price)
+
+    return result;
+  }
+
 
 
 }
