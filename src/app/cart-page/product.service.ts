@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../types/product';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn : 'root'
@@ -16,6 +17,10 @@ export class ProductService {
 
   getProduct(){
     return this.product
+  }
+
+  getItemPage(){
+    return this.product;
   }
 
   removeProduct(product : Product){

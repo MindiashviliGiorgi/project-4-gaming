@@ -6,7 +6,7 @@
   <div class="header-right">
     <ul>
       <li (click)="scrollZero()">Market</li>
-      <li>About</li>
+      <li [routerLink]="'/about'">About</li>
       <ng-container *ngIf="isAuthenticated()">
         <li [routerLink]="'/cart'">Cart</li>
       </ng-container>

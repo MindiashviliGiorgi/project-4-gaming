@@ -1,0 +1,20 @@
+.about-main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #161616;
+  padding: 50px 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 100;
+  }
+  p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+  }
+}

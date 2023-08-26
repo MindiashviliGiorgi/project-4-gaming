@@ -10,7 +10,7 @@ import { ProductService } from './product.service';
 })
 export class CartPageComponent {
 
-  constructor(private marketService : MarketPageService, private productService : ProductService){}
+  constructor(private productService : ProductService){}
 
   ngOnInit():void {}
 

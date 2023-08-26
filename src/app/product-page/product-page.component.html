@@ -1,1 +1,19 @@
-<p>product-page works!</p>
+<app-header></app-header>
+<div class="product-page-main">
+  <div class="container" *ngFor="let item of getItem()">
+    <div class="title">
+      <h1>{{ item.title }}</h1>
+    </div>
+    <div class="image">
+      <img [src]="item.image">
+    </div>
+    <div class="date-price">
+      <p>Price : {{ item.price }}$</p>
+      <p>Date : {{ item.year }}</p>
+    </div>
+    <div class="btn">
+      <button>Buy Now</button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

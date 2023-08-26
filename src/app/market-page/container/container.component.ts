@@ -3,6 +3,7 @@ import { MarketPageService } from '../market-page.service';
 import { Product } from 'src/app/types/product';
 import { ProductService } from 'src/app/cart-page/product.service';
 import { AuthService } from 'src/app/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-container',
@@ -13,7 +14,8 @@ export class ContainerComponent {
   
   @Input() product : Product = {} as Product;
 
-  constructor(private productService : ProductService, private authService : AuthService){}
+  constructor(private productService : ProductService, private authService : AuthService,
+    private router : Router){}
 
   ngOnInit():void {}
 
@@ -25,6 +27,10 @@ export class ContainerComponent {
   addToCart(){
     this.productService.addProduct(this.product);
     this.isInCart = true;
+  }
+  openItemPage(){
+    this.productService.addProduct(this.product)
+    this.router.navigate(['/product']);
   }
   removeFromCart(){
     this.productService.removeProduct(this.product)

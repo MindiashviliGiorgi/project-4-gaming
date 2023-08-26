@@ -3,7 +3,7 @@
     <img [src]="product.image">
   </div>
   <div class="title">
-    <h3>{{ product.title }}</h3>
+    <h3 (click)="openItemPage()">{{ product.title }}</h3>
   </div>
   <div class="year-price">
     <p>Year : {{ product.year }}</p>

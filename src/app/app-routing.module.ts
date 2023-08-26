@@ -5,6 +5,8 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 
 
@@ -12,6 +14,10 @@ const routes: Routes = [
   {
     path : '',
     component : HomePageComponent
+  },
+  {
+    path : 'about',
+    component : AboutPageComponent
   },
   {
     path : 'login',
@@ -26,6 +32,10 @@ const routes: Routes = [
     component : CartPageComponent,
 
   },
+  {
+    path : 'product',
+    component : ProductPageComponent
+  }
 ];
 
 @NgModule({
