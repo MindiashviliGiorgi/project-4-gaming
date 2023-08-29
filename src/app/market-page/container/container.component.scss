@@ -79,3 +79,39 @@
     }    
   }
 }
+@media (max-width : 1246px){
+  .container {
+    .title {
+      h3 {
+        font-size: 16px;
+      }
+    }
+    .year-price {
+      p {
+        font-size: 16px;
+      }
+    }
+    .add-to-cart {
+      .login-need,
+      .add,
+      .remove {
+        button {
+          width: 220px;
+        }
+      }
+    }
+  }
+}
+@media (max-width : 1141px){
+  .container {
+    .add-to-cart {
+      .login-need,
+      .add,
+      .remove {
+        button {
+          width: 220px;
+        }
+      }
+    }
+  }
+}

@@ -103,3 +103,44 @@
     }
   }
 }
+
+@media(max-width : 1141px){
+  .main {
+    .home-page-main {
+      .home-page-section {
+        .section {
+          .section-left {
+            h3 {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width : 1080px) {
+  .main {
+    .home-page-main {
+      .home-page-section {
+        padding: 140px 80px;
+      }
+    }
+  }
+}
+@media(max-width : 930px) {
+  .main {
+    .home-page-main {
+      .home-page-section {
+        padding: 140px 80px;
+        .section {
+          .section-left {
+            h3 {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
