@@ -5,6 +5,7 @@
   padding: 50px 150px;
   display: flex;
   flex-direction: column;
+  .container {
   .title {
     width: 100%;
     height: auto;
@@ -63,6 +64,53 @@
       &:active {
         background-color: #000;
         transition: 0s;
+      }
+    }
+  }
+}
+}
+
+@media(max-width : 900px){
+  .product-page-main {
+    padding: 50px;
+    .container {
+      .image {
+        height: 500px;
+      }
+    }
+  }
+}
+@media(max-width : 530px){
+  .product-page-main {
+    padding: 50px;
+    .container {
+      .title {
+        h1 {
+          font-size: 35px;
+        }
+      }
+      .image {
+        height: 400px;
+      }
+    }
+  }
+}
+@media(max-width : 410px){
+  .product-page-main {
+    padding: 50px;
+    .container {
+      .title {
+        h1 {
+          font-size: 35px;
+        }
+      }
+      .image {
+        height: 350px;
+      }
+      .date-price {
+        p {
+          font-size: 19px;
+        }
       }
     }
   }
