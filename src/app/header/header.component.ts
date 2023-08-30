@@ -17,6 +17,8 @@ export class HeaderComponent {
     this.authService.logout();
   }
 
+  menu : boolean = false;
+
   @HostListener("document:scroll")
   scrollFunction(){
     let pos = document.documentElement.scrollTop;

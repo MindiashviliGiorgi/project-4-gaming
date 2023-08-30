@@ -14,6 +14,27 @@
         <button (click)="signout()" class="logout-btn">Logout</button>
       </ng-container>
     </ul>
+    <div class="burger-menu">
+      <img (click)="menu = true;" [src]="'/assets/images/burger.png'">
+    </div>
+    <ng-container *ngIf="isAuthenticated()">
+      <button (click)="signout()" class="logout-btn">Logout</button>
+    </ng-container>
+  </div>
+</div>
+<div *ngIf="menu" class="menu">
+  <div class="menu-links">
+    <ul>
+      <span (click)="menu = false;">
+        <img [src]="'/assets/images/XX.png'">
+      </span>
+      <li [routerLink]="'/'" (click)="menu = false">Home</li>
+      <li [routerLink]="'/'" (click)="menu = false">Market</li>
+      <li [routerLink]="'/about'" (click)="menu = false">About</li>
+      <ng-container *ngIf="isAuthenticated()">
+        <li [routerLink]="'/cart'" (click)="menu = false">Cart</li>
+      </ng-container>
+    </ul>
   </div>
 </div>
 

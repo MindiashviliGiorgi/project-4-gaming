@@ -37,7 +37,7 @@ export class MarketPageService {
       },
       {
         image : "/assets/images/game-5.jpg",
-        title : 'Call of Duty: Modern Warface II',
+        title : 'Call of Duty: Warface II',
         price :  79.99,
         year  :  "2022",
       },

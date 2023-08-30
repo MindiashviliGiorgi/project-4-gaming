@@ -80,3 +80,25 @@
     }
   }
 }
+@media(max-width : 971px){
+  .sale-product-main {
+    padding: 50px 50px;
+  }
+}
+@media(max-width : 500px){
+  .sale-product-main {
+    padding: 50px 50px;
+    .sale-left {
+      .title {
+        h1 {
+          font-size: 40px;
+        }
+      }
+      .btns {
+        button {
+          width: 250px;
+        }
+      }
+    }
+  }
+}
